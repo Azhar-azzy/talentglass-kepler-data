@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+<title>EJS Is Fun</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+<style>
+  body {
+    padding-top: 50px;
+  }
+</style>
+<div class="container">
+  <h3>1. koi_disposition should be confirmed</h3>
+  <h3>2. koi_insol should be in between .36 and 1.11</h3>
+  <h3>3. koi_prad should be less than 1.6</h3>
+  <table class="table">
+    <tr>
+      <th>kepoi_name</th>
+      <th>koi_disposition</th>
+      <th>koi_insol</th>
+      <th>koi_prad</th>
+    </tr>
+    <% result.forEach(function(data){ %>
+    <tr>
+      <td><%= data.kepoi_name %></td>
+      <td><%= data.koi_disposition %></td>
+      <td><%= data.koi_insol %></td>
+      <td><%= data.koi_prad %></td>
+    </tr>
+    <% }); %>
+  </table>
+</div>
